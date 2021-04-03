@@ -1,6 +1,6 @@
 import os
 import sys
-import urllib
+from urllib.request import urlopen
 import zipfile
 from io import BytesIO
 
@@ -41,8 +41,8 @@ if __name__ == "__main__":
         dest = os.path.abspath(inp[0])
         fc = get_lambda_functions_code_url()
         print("There are {} lambda functions".format(len(fc)))
-        for i, f in enumerat(fc):
-            print("Downloading Lambda function {} {}".format(i, f["FunctionName"]))
+        for i, f in enumerate(fc):
+            print("Downloading Lambda function {} {}".format(i+1, f["FunctionName"]))
             download_lambda_function_code(f["FunctionName"], f["Location"], dest)
     else:
         print("Destination folder doesn't exist")
