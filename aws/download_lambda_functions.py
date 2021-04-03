@@ -1,3 +1,7 @@
+"""
+    The below method is used to download all the lambda functions in a given region (implicitly set as part of default aws cli profile). All the lambda functions
+    are extracted into folders as per their given function names.
+"""
 import os
 import sys
 from urllib.request import urlopen
