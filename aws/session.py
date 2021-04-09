@@ -1,3 +1,5 @@
+# Credits: This code is inspired from this article: https://advancedweb.hu/aws-how-to-secure-access-keys-with-mfa/
+
 import boto3
 import os
 import subprocess
